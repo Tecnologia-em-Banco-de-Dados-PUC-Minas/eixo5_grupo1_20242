@@ -24,7 +24,7 @@ Desenvolvimento de uma interface amigavel que permita o upload de documentos no 
 
 | Etapa         | Atividades |
 |  :----:   | ----------- |
-| ETAPA 1        |[Documentação de Contexto](/ask_your_data/docs/langchain.md) |
+| ETAPA 1        |[Documentação de Contexto](/ask_your_data/docs/documentacao_contexto.md) |
 | ETAPA 2        |[Coleta de Dados](projeto/coleta_dados.md) |
 | ETAPA 3        |[Pré-processamento](projeto/pre_processamento.md) |
 | ETAPA 4        |[Aprendizagem de Máquina](projeto/aprendizado_maquina_rev.md)|
