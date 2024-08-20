@@ -1,20 +1,22 @@
 # Eixo-5
 Arquitetura de Dados em Nuvem
 
-# TÍTULO DO PROJETO
-`CURSO`
-`ANO/SEMESTRE`
+# ASK YOUR DATA
+`TECNOLOGIA EM BANCO DE DADOS`
+`2024/02`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Desenvolvimento de uma interface amigavel que permita o upload de documentos no formato PDF para processamento de texto e geração de embeddings. Os dados vetoriais são armazenados em um vectorbase (Qdrant), e um modelo LLM é utilizado para realizar buscas por similaridade, retornando respostas contextualizadas ao usuário.
 
 ## Integrantes
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Amanda Barbosa Souza
+* Edvaldo Gutierres Ferreira
+* Flavio Nery Rezende
+* Nalanda Gonçalves de Oliveira
+* Natália Ferreira de Carvalho
+
 
 ## Orientador
-* Nome completo do professor 1
+* Cristiano Geraldo Teixeira Silva
 
 # Documentação
 
