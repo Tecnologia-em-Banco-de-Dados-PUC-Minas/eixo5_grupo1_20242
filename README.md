@@ -32,4 +32,3 @@ Desenvolvimento de uma interface amigavel que permita o upload de documentos no 
 | ETAPA 6        |[Otimização](projeto/Otimizacao.md) |
 
 ---
-Teste
