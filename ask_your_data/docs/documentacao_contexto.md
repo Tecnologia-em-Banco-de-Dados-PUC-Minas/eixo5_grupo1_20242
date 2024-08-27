@@ -1,22 +1,48 @@
-# Ask Your Data
-
-## Arquitetura de Dados em Nuvem
-
-**Eixo-5** - Tecnologia em Banco de Dados 2024/02
+# Documentação de Contexto
 
 ![Projeto: AskYourData](/ask_your_data/assets/image.png)
 
----
+## [Lang-chain Overview](/ask_your_data/docs/langchain.md)
 
-## Visão Geral
+
+# Visão Geral
 
 O projeto "Ask Your Data" foi desenvolvido como parte do curso de Arquitetura de Dados em Nuvem, com o objetivo de proporcionar uma solução prática e eficiente para consulta e processamento de documentos em formato PDF. Este projeto integra uma interface amigável desenvolvida em Streamlit, onde os usuários podem fazer upload de documentos, que serão processados para extração de texto e criação de embeddings. Esses dados vetoriais são então armazenados em um banco de dados vetorial (Qdrant), permitindo a consulta eficiente por similaridade utilizando um modelo de linguagem natural (LLM).
 
 ![Projeto: AskYourData](/ask_your_data/assets/image2.png)
 
+
 ## Objetivo do Projeto
 
 O objetivo principal deste projeto é simplificar a interação do usuário com grandes volumes de documentos, permitindo que perguntas sejam feitas diretamente na interface e que as respostas sejam geradas com base no conteúdo contextualizado dos documentos carregados. Isso é alcançado através do processamento de texto e da utilização de técnicas avançadas de embeddings e busca por similaridade.
+
+
+## Requisitos
+
+Antes de começar, certifique-se de que seu sistema atende aos seguintes requisitos:
+
+- **Windows Subsystem for Linux (WSL)**: Este projeto foi desenvolvido e testado utilizando o WSL, permitindo um ambiente Linux dentro do Windows.
+  - [Guia de Instalação do WSL](https://docs.microsoft.com/pt-br/windows/wsl/install)
+
+- **Python 3.11.5 ou superior**: O projeto requer o Python 3.11.5 ou uma versão superior para funcionar corretamente. Certifique-se de que essa versão do Python está instalada e ativa no seu ambiente.
+  - [Download Python](https://www.python.org/downloads/)
+
+- **Poetry**: Para gerenciamento de dependências e ambientes virtuais.
+  - [Guia de Instalação do Poetry](https://python-poetry.org/docs/#installation)
+
+- **Docker e Docker Compose**: Para configurar e executar o Qdrant em um contêiner.
+  - [Guia de Instalação do Docker](https://docs.docker.com/get-docker/)
+  - [Guia de Instalação do Docker Compose](https://docs.docker.com/compose/install/)
+
+- **Git**: Para clonar o repositório do projeto.
+  - [Guia de Instalação do Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+
+## Instruções de Instalação
+
+Siga os passos abaixo para configurar e executar o projeto na seção de [instalação](/ask_your_data/docs/instalacao.md).
+
+---
 
 ## Tecnologias Utilizadas
 
