@@ -20,7 +20,6 @@ Desenvolvimento de uma interface fácil de usar, onde é possível fazer o uploa
 * Nalanda Gonçalves de Oliveira
 * Natália Ferreira de Carvalho
 
-
 ## Orientador
 * Cristiano Geraldo Teixeira Silva
 
