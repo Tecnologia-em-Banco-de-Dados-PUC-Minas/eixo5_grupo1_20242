@@ -1,13 +1,17 @@
+<div style="text-align: right;">
+  <img src="ask_your_data/assets/logo_puc.png" alt="Descrição da Imagem"  width="100" height="100">
+</div>
+
 # Eixo-5
 Arquitetura de Dados em Nuvem
 
-# ASK YOUR DATA
-`TECNOLOGIA EM BANCO DE DADOS`
-`2024/02`
 
-![image](/ask_your_data/assets/image.png)
+# _ASK YOUR DATA_ - Processamento de Documentos PDF e Busca Contextual com Modelos LLM
+`TECNOLOGIA EM BANCO DE DADOS` `2024/2º Semestre`
 
-Desenvolvimento de uma interface amigavel que permita o upload de documentos no formato PDF para processamento de texto e geração de embeddings. Os dados vetoriais são armazenados em um vectorbase (Qdrant), e um modelo LLM é utilizado para realizar buscas por similaridade, retornando respostas contextualizadas ao usuário.
+![image](/ask_your_data/assets/imagem.webp)
+
+Desenvolvimento de uma interface fácil de usar, onde é possível fazer o upload de arquivos PDF para que o texto seja processado e convertido em informações que podem ser pesquisadas. Essas informações são guardadas em um banco de dados especial (Qdrant), e um modelo inteligente é utilizado para encontrar e fornecer respostas que fazem sentido com base no conteúdo dos documentos.
 
 ## Integrantes
 * Amanda Barbosa Souza
