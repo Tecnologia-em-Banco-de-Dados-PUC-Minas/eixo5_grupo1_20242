@@ -1,4 +1,4 @@
-<div style="text-align: right;">
+<div align="right">
   <img src="ask_your_data/assets/logo_puc.png" alt="Descrição da Imagem"  width="100" height="100">
 </div>
 
