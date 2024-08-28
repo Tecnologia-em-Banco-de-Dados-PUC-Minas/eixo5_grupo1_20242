@@ -7,7 +7,7 @@ from utils.text_processing import get_chunks
 from utils.extract_data_pdf import extract_text_from_pdf
 from qdrant_client import QdrantClient
 from dotenv import load_dotenv
-import os
+import o
 
 
 load_dotenv(".ENV")
