@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 pre-commit = "^3.8.0"
+qdrant-client = "^1.11.1"
 
 
 [build-system]
