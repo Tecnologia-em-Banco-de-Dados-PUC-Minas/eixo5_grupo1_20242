@@ -200,14 +200,33 @@ Abaixo está uma visão geral da estrutura do projeto:
 ```plaintext
 ask_your_data/
 │
-├── app.py                   # Arquivo principal do Streamlit
-├── pyproject.toml           # Arquivo de configuração do Poetry
-├── docker-compose.yml       # Arquivo de configuração do Docker Compose
-├── .env                     # Arquivo de variáveis de ambiente
-├── data/                    # Diretório de dados (arquivos PDF)
-├── models/                  # Diretório de modelos LLM
-├── assets/                  # Imagens e outros recursos
-└── README.md                # Este arquivo
+├── .venv/                    # Ambiente virtual gerenciado pelo Poetry
+│
+├── ask_your_data/            # Diretório principal do aplicativo
+│
+├── assets/                   # Diretório de recursos
+│   ├── images/               # Imagens utilizadas no projeto
+│   └── pdf/                  # PDFs utilizados ou gerados no projeto
+│
+├── data/                     # Diretório para armazenamento de dados
+│
+├── docs/                     # Documentação do projeto
+│
+├── process_langchain/        # Scripts e funções relacionados ao processamento com LangChain
+│
+├── process_qdrant/           # Scripts e funções relacionados ao processamento com Qdrant
+│
+├── qdrant_storage/           # Diretório de armazenamento do Qdrant
+│
+├── utils/                    # Funções utilitárias e helpers
+│
+├── docker-compose.yml        # Arquivo de configuração do Docker Compose
+├── poetry.lock               # Arquivo de dependências gerado pelo Poetry
+├── pyproject.toml            # Arquivo de configuração do Poetry
+├── .env                      # Arquivo de variáveis de ambiente
+├── .gitignore                # Arquivo para ignorar arquivos e diretórios no Git
+├── .pre-commit-config.yaml   # Configurações para pre-commit hooks
+└── README.md                 # Este arquivo
 ```
 
 
