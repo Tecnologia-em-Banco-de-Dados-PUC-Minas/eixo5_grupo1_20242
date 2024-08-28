@@ -1,6 +1,6 @@
 # Documentação de Contexto
 
-![Projeto: AskYourData](/ask_your_data/assets/project_ask_your_data.png)
+![Projeto: AskYourData](/ask_your_data/assets/images/project_ask_your_data.png)
 
 ## [Lang-chain Overview](/ask_your_data/docs/langchain.md)
 
@@ -9,7 +9,7 @@
 
 O projeto "Ask Your Data" foi desenvolvido como parte do curso de Arquitetura de Dados em Nuvem, com o objetivo de proporcionar uma solução prática e eficiente para consulta e processamento de documentos em formato PDF. Este projeto integra uma interface amigável desenvolvida em Streamlit, onde os usuários podem fazer upload de documentos, que serão processados para extração de texto e criação de embeddings. Esses dados vetoriais são então armazenados em um banco de dados vetorial (Qdrant), permitindo a consulta eficiente por similaridade utilizando um modelo de linguagem natural (LLM).
 
-![Projeto: AskYourData](/ask_your_data/assets/image2.png)
+![Projeto: AskYourData](/ask_your_data/assets/images/image2.png)
 
 
 ## Objetivo do Projeto

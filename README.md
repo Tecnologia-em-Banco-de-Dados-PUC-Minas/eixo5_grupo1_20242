@@ -1,5 +1,5 @@
 <div align="right">
-  <img src="ask_your_data/assets/logo_puc.png" alt="Descrição da Imagem"  width="100" height="100">
+  <img src="ask_your_data/assets/images/logo_puc.png" alt="Descrição da Imagem"  width="100" height="100">
 </div>
 
 # Eixo-5
@@ -9,7 +9,7 @@ Arquitetura de Dados em Nuvem
 # _ASK YOUR DATA_ - Processamento de Documentos PDF e Busca Contextual com Modelos LLM
 `TECNOLOGIA EM BANCO DE DADOS` `2024/2º Semestre`
 
-![image](/ask_your_data/assets/imagem.webp)
+![image](/ask_your_data/assets/images/imagem.webp)
 
 Desenvolvimento de uma interface fácil de usar, onde é possível fazer o upload de arquivos PDF para que o texto seja processado e convertido em informações que podem ser pesquisadas. Essas informações são guardadas em um banco de dados especial (Qdrant), e um modelo inteligente é utilizado para encontrar e fornecer respostas que fazem sentido com base no conteúdo dos documentos.
 
