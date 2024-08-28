@@ -29,11 +29,16 @@ Siga os passos abaixo para configurar e executar o projeto:
     docker-compose up
     ```
 
+![qdrant-docker-compose](/ask_your_data/assets/qdrant_docker_compose.png)
+
+
 ### Acessar o Dashboard do Qdrant
 
 Após iniciar o Qdrant com Docker, acesse o dashboard no seu navegador através do seguinte endereço:
 
 [http://localhost:6333/dashboard](http://localhost:6333/dashboard)
+
+![qdrant-database](/ask_your_data/assets/qdrant.png)
 
 ---
 

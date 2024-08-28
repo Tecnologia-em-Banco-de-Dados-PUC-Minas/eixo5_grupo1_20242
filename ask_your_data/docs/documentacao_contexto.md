@@ -1,6 +1,6 @@
 # Documentação de Contexto
 
-![Projeto: AskYourData](/ask_your_data/assets/image.png)
+![Projeto: AskYourData](/ask_your_data/assets/project_ask_your_data.png)
 
 ## [Lang-chain Overview](/ask_your_data/docs/langchain.md)
 
