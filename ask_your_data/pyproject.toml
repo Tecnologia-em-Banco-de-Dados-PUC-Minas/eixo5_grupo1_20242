@@ -9,6 +9,14 @@ readme = "README.md"
 python = "^3.11"
 pre-commit = "^3.8.0"
 qdrant-client = "^1.11.1"
+langchain-community = "^0.2.13"
+python-dotenv = "^1.0.1"
+openai = "^1.42.0"
+tiktoken = "^0.7.0"
+langchain-openai = "^0.1.23"
+pymupdf = "^1.24.9"
+streamlit = "^1.38.0"
+streamlit-chat = "^0.1.1"
 
 
 [build-system]
