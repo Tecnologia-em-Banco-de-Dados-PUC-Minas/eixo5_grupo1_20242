@@ -1,5 +1,11 @@
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import Distance, VectorParams
+from dotenv import load_dotenv
+import os
+
+load_dotenv(".ENV")
+qdrant_api_key = os.environ.get("QDRANT_API_KEY")
+qdrant_url = os.environ.get("QDRANT_URL")
 
 
 def create_collection(name: str, size: int) -> None:
@@ -29,6 +35,24 @@ def create_collection(name: str, size: int) -> None:
     client = QdrantClient(host="localhost", port=6333)
     try:
         client.create_collection(
+            collection_name=name,
+            vectors_config=VectorParams(size=size, distance=Distance.COSINE),
+        )
+        print("Coleção criada com sucesso.")
+    except Exception as e:
+        print(f"Erro ao criar a coleção (possivelmente já existe): {e}")
+
+
+def create_collection_cloud(name: str, size: int) -> None:
+
+    # Connect to Qdrant Cloud
+    qdrant_client = QdrantClient(
+        url=qdrant_url,
+        api_key=qdrant_api_key,
+    )
+
+    try:
+        qdrant_client.create_collection(
             collection_name=name,
             vectors_config=VectorParams(size=size, distance=Distance.COSINE),
         )

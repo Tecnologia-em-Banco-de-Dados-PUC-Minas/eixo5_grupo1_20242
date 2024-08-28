@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_chat import message
-from process_qdrant.manager import create_collection
+from process_qdrant.manager import create_collection, create_collection_cloud
 from process_langchain.embedding import initialize_embeddings
 from process_langchain.retrieval_qa import create_retrieval_qa
 from utils.text_processing import get_chunks
@@ -11,31 +11,47 @@ import os
 
 
 load_dotenv(".ENV")
-openai_api_key = os.environ.get("OPENAI_API_KEY")
+qdrant_api_key = os.environ.get("OPENAI_API_KEY")
+qdrant_url = os.environ.get("QDRANT_URL")
+qdrant_api_key = os.environ.get("QDRANT_API_KEY")
+
 
 st.set_page_config(page_title="Pergunte ao seu PDF!", page_icon=":books:")
 
 
 # Inicializações apenas uma vez, evitando recarregamento em cada interação
 @st.cache_resource
-def init_components():
-    # Criação da coleção Qdrant
-    client = QdrantClient(host="localhost", port=6333)
-    create_collection("openai_collection", 1536)
+def init_components(local=True):
+    if local:
+        # Criação da coleção Qdrant Local
+        client = QdrantClient(host="localhost", port=6333)
+        create_collection("openai_collection", 1536)
+    else:
+        # Criação da coleção Qdrant Cloud
+        client = QdrantClient(url=qdrant_url, api_key=qdrant_api_key)
+        create_collection_cloud("openai_collection", 1536)
 
     # Inicialização do processo de embedding
     vectorstore = initialize_embeddings("openai_collection", client)
 
+    # Armazenando o vectorstore no estado da sessão
+    st.session_state.vectorstore = vectorstore
+    st.session_state.qa = create_retrieval_qa(vectorstore)
+
     # Executando o QA
     qa = create_retrieval_qa(vectorstore)
 
-    return qa
+    return vectorstore
 
 
-# Define a variável vectorstore no escopo global
-vectorstore = None
+# Botão para selecionar entre Qdrant Local e Cloud
+use_cloud = st.sidebar.checkbox("Usar Qdrant Cloud")
 
-qa = init_components()
+# Verifique se o vectorstore já foi inicializado
+if "vectorstore" not in st.session_state:
+    vectorstore = init_components(local=not use_cloud)
+else:
+    vectorstore = st.session_state.vectorstore
 
 
 # Título da barra lateral
@@ -80,22 +96,54 @@ st.header("Converse com o seu PDF")
 with st.sidebar:
 
     if st.button("Processar dados"):
-        # Criação da coleção Qdrant
-        client = QdrantClient(host="localhost", port=6333)
-        create_collection("openai_collection", 1536)
+        st.info("Iniciando o processamento...")
 
-        # Inicialização do processo de embedding
+        # Criação da barra de progresso
+        progress_bar = st.progress(0)
+        progress_status = st.empty()
+
+        # Passo 1: Criação da coleção Qdrant
+        client = QdrantClient(
+            host="localhost" if not use_cloud else qdrant_url,
+            port=6333 if not use_cloud else None,
+            api_key=None if not use_cloud else qdrant_api_key,
+        )
+        st.success("Cliente Qdrant criado com sucesso.")
+        progress_bar.progress(25)
+        progress_status.text("Cliente Qdrant criado.")
+
+        if use_cloud:
+            st.info("Usando Qdrant Cloud")
+            create_collection_cloud("openai_collection", 1536)
+        else:
+            st.info("Usando Qdrant Local")
+            create_collection("openai_collection", 1536)
+
+        progress_bar.progress(50)
+        progress_status.text("Coleção criada com sucesso.")
+
+        # Passo 2: Inicialização do processo de embedding
         vectorstore = initialize_embeddings("openai_collection", client)
+        st.success("Vectorstore inicializado com sucesso.")
+        progress_bar.progress(75)
+        progress_status.text("Vectorstore inicializado.")
 
-        # Carregando e processando o texto
+        # Passo 3: Carregando e processando o texto
         with open(txt_file_path, encoding="utf-8") as f:
             raw_text = f.read()
+
         texts = get_chunks(raw_text)
+        st.success("Textos carregados com sucesso.")
+        progress_bar.progress(90)
+        progress_status.text("Textos carregados.")
 
-        # # Adicionando textos ao banco de dados
+        # Passo 4: Adicionando textos ao banco de dados
         vectorstore.add_texts(texts)
+        st.success("Textos adicionados ao vectorstore com sucesso!")
+        progress_bar.progress(100)
+        progress_status.text("Processamento concluído!")
 
-        st.write("Dados processados com sucesso!!!")
+        st.success("Processo concluído com sucesso!!!")
 
 
 # Inicializa o histórico de conversação se ainda não existir
