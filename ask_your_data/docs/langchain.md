@@ -1,6 +1,6 @@
 # LangChain Overview
 
-![Imagem](/ask_your_data/assets/langchain.png)
+![Imagem](/ask_your_data/assets/images/langchain.png)
 
 
 LangChain é uma estrutura projetada para facilitar a construção de aplicações que utilizam modelos de linguagem natural (LLMs). Ele age como um "coordenador", integrando diferentes componentes especializados para processar e responder às solicitações dos usuários de forma eficiente.
