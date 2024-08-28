@@ -33,6 +33,7 @@ def initialize_embeddings(collection_name: str, client) -> Qdrant:
     client = QdrantClient(host="localhost", port=6333)
     vectorstore = initialize_embeddings(collection_name="minha_colecao", client=client)
     """
+
     embeddings = OpenAIEmbeddings()
     vectorstore = Qdrant(
         client=client, collection_name=collection_name, embeddings=embeddings

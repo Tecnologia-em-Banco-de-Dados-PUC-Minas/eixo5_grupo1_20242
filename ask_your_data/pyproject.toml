@@ -17,6 +17,7 @@ langchain-openai = "^0.1.23"
 pymupdf = "^1.24.9"
 streamlit = "^1.38.0"
 streamlit-chat = "^0.1.1"
+pypdf2 = "^3.0.1"
 
 
 [build-system]
