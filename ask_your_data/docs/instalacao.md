@@ -200,13 +200,13 @@ Abaixo está uma visão geral da estrutura do projeto:
 ```plaintext
 ask_your_data/
 │
-├── .venv/                    # Ambiente virtual gerenciado pelo Poetry
+├── .github/                  # Configurações específicas do GitHub
+│   └── workflows/            # Workflows do GitHub Actions
+│       └── ci.yml            # Arquivo de configuração do workflow de CI
 │
 ├── ask_your_data/            # Diretório principal do aplicativo
 │
 ├── assets/                   # Diretório de recursos
-│   ├── images/               # Imagens utilizadas no projeto
-│   └── pdf/                  # PDFs utilizados ou gerados no projeto
 │
 ├── data/                     # Diretório para armazenamento de dados
 │
@@ -218,15 +218,20 @@ ask_your_data/
 │
 ├── qdrant_storage/           # Diretório de armazenamento do Qdrant
 │
+├── tests/                    # Diretório contendo os testes do projeto
+│
 ├── utils/                    # Funções utilitárias e helpers
 │
+├── .ENV                      # Arquivo de variáveis de ambiente (note o nome em maiúsculas)
+│
+├── app.py                    # Arquivo principal para rodar o aplicativo Streamlit
 ├── docker-compose.yml        # Arquivo de configuração do Docker Compose
 ├── poetry.lock               # Arquivo de dependências gerado pelo Poetry
 ├── pyproject.toml            # Arquivo de configuração do Poetry
-├── .env                      # Arquivo de variáveis de ambiente
+├── test.py                   # Arquivo de teste (individual)
 ├── .gitignore                # Arquivo para ignorar arquivos e diretórios no Git
 ├── .pre-commit-config.yaml   # Configurações para pre-commit hooks
-└── README.md                 # Este arquivo
+└── README.md                 # Arquivo README do projeto
 ```
 
 
