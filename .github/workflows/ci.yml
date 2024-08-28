@@ -25,15 +25,18 @@ jobs:
         echo "${{ runner.tool_cache }}/poetry/bin" >> $GITHUB_PATH
 
     - name: Install dependencies
+      working-directory: ./ask_your_data  # Ajuste para o diretório correto
       run: |
         poetry install
 
     - name: Run tests
+      working-directory: ./ask_your_data  # Ajuste para o diretório correto
       run: |
         poetry run pytest
 
     - name: Start Streamlit (smoke test)
+      working-directory: ./ask_your_data  # Ajuste para o diretório correto
       run: |
-        poetry run streamlit run your_app.py --server.headless true &
+        poetry run streamlit run app.py --server.headless true &
       env:
         STREAMLIT_SERVER_HEADLESS: true
