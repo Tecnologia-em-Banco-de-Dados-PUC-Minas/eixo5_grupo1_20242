@@ -6,11 +6,12 @@ from process_langchain.retrieval_qa import create_retrieval_qa
 from utils.text_processing import get_chunks
 from utils.extract_data_pdf import extract_text_from_pdf
 from qdrant_client import QdrantClient
-from dotenv import load_dotenv
+
+# from dotenv import load_dotenv
 import os
 
 
-load_dotenv(".ENV")
+# load_dotenv(".ENV")
 qdrant_api_key = os.environ.get("OPENAI_API_KEY")
 qdrant_url = os.environ.get("QDRANT_URL")
 qdrant_api_key = os.environ.get("QDRANT_API_KEY")
