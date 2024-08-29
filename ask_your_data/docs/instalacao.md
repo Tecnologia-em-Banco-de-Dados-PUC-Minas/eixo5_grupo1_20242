@@ -192,6 +192,7 @@ Após iniciar o Streamlit, acesse a aplicação no seu navegador através do seg
 http://localhost:8501
 ```
 
+![interface](/ask_your_data/assets/images/interface.png)
 
 ## Estrutura do Projeto
 
