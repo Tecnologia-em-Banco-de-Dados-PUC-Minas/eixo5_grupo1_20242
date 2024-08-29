@@ -1,6 +1,7 @@
-## Instruções de Instalação
+# Instruções de Instalação
 
 Siga os passos abaixo para configurar e executar o projeto:
+
 ---
 
 ## Configuração e Execução
@@ -30,7 +31,6 @@ Siga os passos abaixo para configurar e executar o projeto:
     ```
 
 ![qdrant-docker-compose](/ask_your_data/assets/images/qdrant_docker_compose.png)
-
 
 ### Acessar o Dashboard do Qdrant
 
@@ -158,30 +158,49 @@ poetry add nome_da_biblioteca
 
     Extensão do Streamlit que adiciona funcionalidades de chat à interface web, permitindo que o usuário interaja de maneira mais natural e conversacional com o sistema. No contexto do projeto, isso é útil para que os usuários possam fazer perguntas e receber respostas diretamente na interface.
 
+- **Scikit-learn:** 
+
+    ```bash
+    poetry add scikit-learn
+    ```
+
+    Utilizado para calcular a similaridade de cosseno entre as respostas dos modelos, além de fornecer outras métricas de avaliação como precisão, recall e F1-Score.
+
+- **Matplotlib e Seaborn:** 
+
+    ```bash
+    poetry add matplotlib seaborn
+    ```
+
+    Bibliotecas usadas para visualização de dados, permitindo a criação de gráficos e tabelas que ajudam na interpretação dos resultados das comparações entre modelos de embeddings.
+
+- **Pandas:** 
+
+    ```bash
+    poetry add pandas
+    ```
+
+    Essencial para manipulação e análise de dados, criando dataframes para organizar e exibir os resultados das consultas e métricas de desempenho.
 
 ## OpenAI API Key
 
 Gere sua API Key da OpenAI acessando [OpenAI Platform](https://platform.openai.com/api-keys). Por questões de segurança, nunca compartilhe sua chave API publicamente.
-
 
 ## Configuração das Variáveis de Ambiente
 
 Crie um arquivo `.env` na raiz do projeto para armazenar a variável API Key da OpenAI. Aqui está um exemplo de como seu arquivo `.env` pode ser configurado:
 
 ```bash
-OPENAI_API_KEY='=sua_api_key'
+OPENAI_API_KEY='sua_api_key'
 ```
-
 
 ## Executando o Projeto
 
 Após a instalação de todas as dependências e a configuração do Qdrant, execute seu aplicativo Streamlit usando:
 
 ```bash
-streamlit run seu_arquivo_app.py
+streamlit run app.py
 ```
-
-Substitua `seu_arquivo_app.py` pelo nome do seu arquivo principal do Streamlit.
 
 
 ## Acesse a Aplicação
@@ -232,29 +251,29 @@ ask_your_data/
 .gitignore                   # Arquivo para ignorar arquivos e diretórios no Git
 .pre-commit-config.yaml      # Configurações para pre-commit hooks
 README.md                    # Arquivo README do projeto
-
 ```
-
 
 ## Tecnologias Utilizadas
 
 - **Streamlit**: Criação da interface web interativa.
+- **Streamlit Chat**: Adiciona funcionalidades de chat à interface web.
 - **LangChain**: Processamento de linguagem natural e geração de embeddings.
 - **Qdrant**: Armazenamento e gestão dos embeddings vetoriais.
+- **Python-dotenv**: Gerenciamento de variáveis de ambiente.
+- **Scikit-learn**: Similaridade de cosseno e métricas de avaliação.
+- **Pandas**: Manipulação de dados e criação de tabelas.
+- **Matplotlib e Seaborn**: Visualização de dados.
 - **Python 3.11.5 ou superior**: Linguagem de programação principal.
 - **Poetry**: Gerenciamento de dependências e ambientes virtuais.
 - **Docker e Docker Compose**: Configuração e execução do Qdrant em contêineres.
-
 
 ## Contribuições
 
 Contribuições são bem-vindas! Se você deseja melhorar este projeto, sinta-se à vontade para enviar um *pull request* ou abrir uma *issue*.
 
-
 ## Licença
 
 Este projeto é licenciado sob os termos da [MIT License](LICENSE).
-
 
 ## Suporte
 

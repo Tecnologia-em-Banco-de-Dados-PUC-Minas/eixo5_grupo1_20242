@@ -1,0 +1,18 @@
+ Instalação das Dependências
+Certifique-se de que você tem o pacote transformers instalado. Se não, instale-o com o seguinte comando:
+
+pip install transformers
+
+
+ Instalar o PyTorch
+Você pode instalar o PyTorch usando o seguinte comando:
+
+pip install torch
+
+
+
+Instale o scikit-learn:
+
+Execute o seguinte comando para instalar o scikit-learn:
+
+pip install scikit-learn

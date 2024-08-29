@@ -26,11 +26,11 @@ Desenvolvimento de uma interface fácil de usar, onde é possível fazer o uploa
 
 | Etapa         | Atividades |
 |  :----:   | ----------- |
-| ETAPA 1        |[Documentação de Contexto](/ask_your_data/docs/documentacao_contexto.md) |
-| ETAPA 2        |[Coleta de Dados](projeto/coleta_dados.md) |
-| ETAPA 3        |[Pré-processamento](projeto/pre_processamento.md) |
-| ETAPA 4        |[Aprendizagem de Máquina](projeto/aprendizado_maquina_rev.md)|
-| ETAPA 5        |[Análise dos Resultados](projeto/analise_resultados.md) |
-| ETAPA 6        |[Otimização](projeto/Otimizacao.md) |
+| ETAPA 1        |[Documentação de Contexto](/ask_your_data/docs/1_documentacao_contexto.md) |
+| ETAPA 2        |[Coleta de Dados](/ask_your_data/docs/2_coleta_dados.md) |
+| ETAPA 3        |[Pré-processamento](/ask_your_data/docs/3_pre_processamento.md) |
+| ETAPA 4        |[Aprendizagem de Máquina](/ask_your_data/docs/4_aprendizado_maquina_rev.md)|
+| ETAPA 5        |[Análise dos Resultados](/ask_your_data/docs/5_analise_resultados.md) |
+| ETAPA 6        |[Otimização](/ask_your_data/docs/6_otimizacao.md) |
 
 ---
