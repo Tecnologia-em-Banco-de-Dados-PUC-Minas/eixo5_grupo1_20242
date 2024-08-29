@@ -204,11 +204,7 @@ ask_your_data/
 │   └── workflows/            # Workflows do GitHub Actions
 │       └── ci.yml            # Arquivo de configuração do workflow de CI
 │
-├── ask_your_data/            # Diretório principal do aplicativo
-│
 ├── assets/                   # Diretório de recursos
-│
-├── data/                     # Diretório para armazenamento de dados
 │
 ├── docs/                     # Documentação do projeto
 │
@@ -228,7 +224,6 @@ ask_your_data/
 ├── docker-compose.yml        # Arquivo de configuração do Docker Compose
 ├── poetry.lock               # Arquivo de dependências gerado pelo Poetry
 ├── pyproject.toml            # Arquivo de configuração do Poetry
-├── test.py                   # Arquivo de teste (individual)
 ├── .gitignore                # Arquivo para ignorar arquivos e diretórios no Git
 ├── .pre-commit-config.yaml   # Configurações para pre-commit hooks
 └── README.md                 # Arquivo README do projeto

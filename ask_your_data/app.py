@@ -10,12 +10,10 @@ from qdrant_client import QdrantClient
 from dotenv import load_dotenv
 import os
 
-
 load_dotenv(".env")
 qdrant_api_key = os.environ.get("OPENAI_API_KEY")
 qdrant_url = os.environ.get("QDRANT_URL")
 qdrant_api_key = os.environ.get("QDRANT_API_KEY")
-
 
 st.set_page_config(page_title="Pergunte ao seu PDF!", page_icon=":books:")
 
@@ -47,10 +45,10 @@ use_cloud = st.sidebar.checkbox("Usar Qdrant Cloud")
 
 # Verifique se o vectorstore já foi inicializado
 if "vectorstore" not in st.session_state:
-    vectorstore = init_components(local=not use_cloud)
+    vectorstore, qa = init_components(local=not use_cloud)
 else:
     vectorstore = st.session_state.vectorstore
-
+    qa = st.session_state.qa
 
 # Título da barra lateral
 st.sidebar.title("Bem vindo ao AskYourPDF")
@@ -87,7 +85,6 @@ for uploaded_file in uploaded_files:
             st.sidebar.write(f"Arquivo salvo com sucesso!")
         except Exception as e:
             st.sidebar.write(f"Erro ao processar o arquivo: {e}")
-
 
 st.header("Converse com o seu PDF")
 
@@ -143,7 +140,6 @@ with st.sidebar:
 
         st.success("Processo concluído com sucesso!!!")
 
-
 # Inicializa o histórico de conversação se ainda não existir
 if "historico_conversa" not in st.session_state:
     st.session_state.historico_conversa = []
@@ -162,10 +158,7 @@ if st.button("Enviar"):
 
         # Verifica se vectorstore não é None
         if vectorstore is not None:
-            qa = create_retrieval_qa(vectorstore)
-
-        # Processamento da pergunta
-        response = qa.run(user_input)
+            response = qa.run(user_input)
 
         # Adiciona a resposta ao histórico de conversação
         st.session_state.historico_conversa.append(
