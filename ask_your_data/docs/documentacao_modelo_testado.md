@@ -1,5 +1,3 @@
-Claro! Vamos elaborar cada uma das seções mencionadas para que você possa incluir na documentação do projeto.
-
 ### 5. **Documentação**
 
 #### **Introdução aos Modelos Testados**
@@ -65,7 +63,3 @@ Na discussão, analise os resultados obtidos e justifique a escolha do modelo fi
 2. **Justificativa para a Escolha Final:**
    - **Modelo Selecionado:** Baseado nos resultados quantitativos e qualitativos, justifique a escolha do modelo que será utilizado no sistema final. Por exemplo, se BERT foi escolhido, explique que apesar de ser um pouco mais lento, ele fornece respostas mais precisas e contextualmente relevantes para as consultas dos usuários.
    - **Considerações Finais:** Discuta qualquer outro fator que influenciou a decisão final, como a escalabilidade ou a facilidade de manutenção do modelo escolhido.
-
----
-
-Esse esqueleto para a documentação deve cobrir todos os aspectos importantes da etapa de avaliação e comparação de modelos, fornecendo uma visão clara e justificada do processo e dos resultados obtidos. Se precisar de mais detalhes ou ajustes, estou à disposição!

@@ -63,7 +63,3 @@ Com base nos resultados da comparação, o modelo que atingir maior precisão se
 ## Conclusão
 
 Este projeto demonstra a importância de utilizar métricas de similaridade semântica para comparar modelos de embeddings em tarefas de NLP. A abordagem baseada em Cosine Similarity permite uma avaliação mais precisa do desempenho dos modelos, refletindo a verdadeira qualidade das respostas geradas.
-
----
-
-Esse README agora inclui as imagens dos gráficos e da tabela de métricas, proporcionando uma visão mais completa dos resultados e da análise. Se precisar de mais alguma coisa, estarei por aqui para ajudar!
