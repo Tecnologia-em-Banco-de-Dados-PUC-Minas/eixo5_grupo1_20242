@@ -10,7 +10,7 @@ Arquitetura de Dados em Nuvem ☁️
 
 ![image](/ask_your_data/assets/images/imagem.webp)
 
-Desenvolvimento de uma interface fácil de usar, onde é possível fazer o upload de arquivos PDF para que o texto seja processado e convertido em informações que podem ser pesquisadas. Essas informações são guardadas em um banco de dados especial (Qdrant), e um modelo inteligente é utilizado para encontrar e fornecer respostas que fazem sentido com base no conteúdo dos documentos.
+Desenvolvimento de uma interface fácil de usar, onde é possível fazer o upload de arquivos PDF para que o texto seja processado e convertido em informações que podem ser pesquisadas. Essas informações são guardadas em um banco de dados especial (Qdrant), e um modelo inteligente é utilizado para encontrar e fornecer respostas que fazem sentido com base no conteúdo dos documentos. Além disso, será possível comparar modelos diferentes de criação de embeddings, para avaliar qual deles oferece os melhores resultados nas buscas por similaridade.
 
 ## Integrantes 👥
 * Amanda Barbosa Souza
