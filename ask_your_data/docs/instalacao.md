@@ -198,35 +198,40 @@ http://localhost:8501
 Abaixo está uma visão geral da estrutura do projeto:
 
 ```plaintext
+.github/                     # Configurações específicas do GitHub
+│
+├── workflows/               # Workflows do GitHub Actions
+│   └── ci.yml               # Arquivo de configuração do workflow de CI
+│
 ask_your_data/
 │
-├── .github/                  # Configurações específicas do GitHub
-│   └── workflows/            # Workflows do GitHub Actions
-│       └── ci.yml            # Arquivo de configuração do workflow de CI
+├── .streamlit/              # Configurações específicas do Streamlit
+│   └── config.toml          # Arquivo de configuração do Streamlit (tema, etc.)
 │
-├── assets/                   # Diretório de recursos
+├── assets/                  # Diretório de recursos (PDFs, imagens, etc.)
 │
-├── docs/                     # Documentação do projeto
+├── docs/                    # Documentação do projeto
 │
-├── process_langchain/        # Scripts e funções relacionados ao processamento com LangChain
+├── process_langchain/       # Scripts e funções relacionados ao processamento com LangChain
 │
-├── process_qdrant/           # Scripts e funções relacionados ao processamento com Qdrant
+├── process_qdrant/          # Scripts e funções relacionados ao processamento com Qdrant
 │
-├── qdrant_storage/           # Diretório de armazenamento do Qdrant
+├── qdrant_storage/          # Diretório de armazenamento do Qdrant
 │
-├── tests/                    # Diretório contendo os testes do projeto
+├── tests/                   # Diretório contendo os testes do projeto
 │
-├── utils/                    # Funções utilitárias e helpers
+├── utils/                   # Funções utilitárias e helpers
 │
-├── .ENV                      # Arquivo de variáveis de ambiente (note o nome em maiúsculas)
+├── .env                     # Arquivo de variáveis de ambiente
 │
-├── app.py                    # Arquivo principal para rodar o aplicativo Streamlit
-├── docker-compose.yml        # Arquivo de configuração do Docker Compose
-├── poetry.lock               # Arquivo de dependências gerado pelo Poetry
-├── pyproject.toml            # Arquivo de configuração do Poetry
-├── .gitignore                # Arquivo para ignorar arquivos e diretórios no Git
-├── .pre-commit-config.yaml   # Configurações para pre-commit hooks
-└── README.md                 # Arquivo README do projeto
+├── app.py                   # Arquivo principal para rodar o aplicativo Streamlit
+├── docker-compose.yml       # Arquivo de configuração do Docker Compose
+├── poetry.lock              # Arquivo de dependências gerado pelo Poetry
+├── pyproject.toml           # Arquivo de configuração do Poetry
+.gitignore                   # Arquivo para ignorar arquivos e diretórios no Git
+.pre-commit-config.yaml      # Configurações para pre-commit hooks
+README.md                    # Arquivo README do projeto
+
 ```
 
 
