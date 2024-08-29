@@ -41,7 +41,7 @@ def init_components(local=True):
     # Executando o QA
     qa = create_retrieval_qa(vectorstore)
 
-    return vectorstore
+    return vectorstore, qa
 
 
 # Botão para selecionar entre Qdrant Local e Cloud
