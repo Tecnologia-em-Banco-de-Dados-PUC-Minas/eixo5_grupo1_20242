@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Nesta etapa, focamos na coleta de documentos PDF que serão utilizados ao longo do projeto para treinar, validar e testar os modelos de aprendizado de máquina. Os documentos selecionados são especificamente relacionados a procedimentos internos de empresas, o que é fundamental para garantir que os modelos possam responder de forma precisa a perguntas contextuais sobre processos empresariais.
+O objetivo desta etapa é reunir um conjunto de dados robusto, composto por documentos PDF que detalham protocolos e orientações de primeiros socorros. Esses documentos devem ser representativos e suficientes para cobrir uma variedade de cenários que os modelos de aprendizado de máquina precisarão entender e processar, permitindo respostas precisas e adequadas em situações de emergência.
 
 ## Objetivo
 
@@ -28,3 +28,4 @@ Os dados coletados incluem documentos PDF detalhando procedimentos internos de v
 ## Próximos Passos
 
 Os documentos PDF coletados serão processados e preparados na próxima etapa, onde iremos garantir que estejam prontos para uso nos modelos de aprendizado de máquina.
+
